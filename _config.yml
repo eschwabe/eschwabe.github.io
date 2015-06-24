@@ -1,1 +1,11 @@
-highlighter: pygments
+# Site settings
+title: Eric Schwabe
+email: eric@ericschwabe.com
+description: My thoughts, perspectives, and ideas on the technological world.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://ericschwabe.com" # the base hostname & protocol for your site
+twitter_username: ericschwabe
+github_username:  eschwabe
+
+# Build settings
+markdown: kramdown
