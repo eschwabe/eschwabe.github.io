@@ -179,11 +179,8 @@ This series contains review materials for software engineer interview practice. 
 - Deletion:   O(m)
 
 
-
-
-
-
 ### **Sources**
+
  - <http://bigocheatsheet.com>
- - <https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#file-the-technical-interview-cheat-sheet-md>
  - <https://www.coursera.org/course/algs4partI>
+ - <https://gist.github.com/TSiege/cbb0507082bb18ff7e4b#file-the-technical-interview-cheat-sheet-md>
