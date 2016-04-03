@@ -8,6 +8,7 @@
 
     // Positioning context for the mobile navigation icon
     position: relative;
+    background: $grey-color-light;
 }
 
 .site-title {
@@ -39,6 +40,10 @@
         &:not(:first-child) {
             margin-left: 20px;
         }
+    }
+    
+    .page-link :hover {
+      color: $brand-color;
     }
 
     @include media-query($on-palm) {
@@ -93,7 +98,8 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    padding: $spacing-unit / 2 0;
+    background: $grey-color-light;
 }
 
 .footer-heading {
@@ -116,7 +122,6 @@
 
 .footer-col {
     float: left;
-    margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
 }
 
@@ -233,4 +238,13 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+* Pagination
+*/
+.pagination {
+  span.page_number {
+    font-weight: bold;
+  }
 }

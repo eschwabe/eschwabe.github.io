@@ -1,11 +1,13 @@
 # Site settings
-title: Schwabe's Blog
+title: Eric Schwabe's Blog
 email: eric@ericschwabe.com
-description: My thoughts, perspectives, and ideas on the technological world.
+description: My thoughts, perspectives, and ideas on software and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://ericschwabe.com" # the base hostname & protocol for your site
 twitter_username: ericschwabe
 github_username:  eschwabe
+paginate: 5
 
 # Build settings
 markdown: kramdown
+gems: ['jekyll-paginate']

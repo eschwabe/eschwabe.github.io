@@ -5,6 +5,8 @@ date:   2016-03-04 22:51:00 -0800
 categories: profile about
 ---
 
+I figured it would be best to start the blog with a bit about myself.
+
 # Introduction
 
 My name is Eric Schwabe. I work as a software engineer, currently in commericial aerospace test systems. I am always looking to expand my interests and expertise, so I decided to try writing a blog. I have always been fascinated with personal computers and electronic devices growing up. I grew up during the time when the Internet became common in every household.
