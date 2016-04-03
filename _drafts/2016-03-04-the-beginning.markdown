@@ -1,36 +1,27 @@
 ---
 layout: post
-title:  "The Beginning"
+title:  "Starting Something New"
 date:   2016-03-04 22:51:00 -0800
 categories: profile about
 ---
 
 # Introduction
 
-My name is Eric Schwabe. I work as a software engineer, currently on commericial aerospace test systems. 
-
-I am always looking to expand my interests and expertise, so I decided to try writing a blog.
-
-Fascinated with personal computers and electronic devices  growing up. Grew up as the Internet became common in every household. 
-
-Committing to a time investment
-The Beginning
-Starting something new is always a challenge. Getting over the hurdle of actually sitting down and accomplishing your goal is difficult.
+My name is Eric Schwabe. I work as a software engineer, currently in commericial aerospace test systems. I am always looking to expand my interests and expertise, so I decided to try writing a blog. I have always been fascinated with personal computers and electronic devices growing up. I grew up during the time when the Internet became common in every household.
 
 # Why A Blog
 
-A place to keep track of my thoughts and things I've learned. Information is difficult to organize. Google does a decent job, but it's not a collection of only my interests or recent work. 
+A blog seems like a useful place to keep track of my thoughts and things I've learned. Information tends to be difficult to organize, so creating my own personal reference guide should be useful. Google and other companies do a decent job :), but it's certainly not a collection of only my interests or recent work. It's easy to lose track of your own "progress" over time, so I hope this will be a useful source to reflect upon in the future.
 
-Give it a shot. 
-
-Why do I want to write a blog?
-Many other blogs out there. Don't expect a lot of readers, but I am mainly writing it for myself. It's easy to lose track of your "progress" over time. So many things to learn. Something to reference in the future. Improve my writing speed.
-
-So, what is the purpose?
-Gather my thoughts and ideas related to my pursuit of knowledge. I plan to primarily focus on software engineering and programming related topics, but I may diverge on occasion.
+The difficult part about starting some new is committing to the time investment. Writing blog posts certaining takes time and expect it will be a bit of hurdle to actually sit down occassionaly and write down my recent experiences. For now, I plan on adding posts for significant accomplishments or useful tidbits, but I may commit to a more regular schedule in the future. 
 
 # Sources
 
-Coding horror. Recommendation for all programmers to practice writing. Strong communication required in this industry. Sell or spread ideas
+As for topics, I plan on primarily focusing on areas related to software engineering, programming, and technology. Like most professional software engineerings, I have a few news sources that I tend to read often and expect that I will post my own thoughts on the issues at times.
 
-Inspiration. Coding Horror. Hacker News.
+Here are a few of my current news sources:
+
+- <http://www.codinghorror.com>
+- <https://news.ycombinator.com/news>
+- <http://arstechnica.com>
+- <https://www.reddit.com/r/programming/>
