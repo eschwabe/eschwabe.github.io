@@ -2,7 +2,8 @@
 layout: post
 title:  "Interviews: Data Structures"
 date:   2016-03-27 01:00:00 -0800
-categories: interview data-structures
+categories: interviews
+tags: interview data-structures
 comments: true
 ---
 

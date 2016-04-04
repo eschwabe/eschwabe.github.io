@@ -2,7 +2,8 @@
 layout: post
 title:  "Starting Something New"
 date:   2016-03-04 22:51:00 -0800
-categories: profile about
+categories: self
+tags: profile about
 comments: true
 ---
 
