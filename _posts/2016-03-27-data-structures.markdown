@@ -3,6 +3,7 @@ layout: post
 title:  "Interviews: Data Structures"
 date:   2016-03-27 01:00:00 -0800
 categories: interview data-structures
+comments: true
 ---
 
 This series contains review materials for software engineer interview practice. This guide provides a high-level overview on basic data structures including their implementations, related algorithms, and efficiency.
