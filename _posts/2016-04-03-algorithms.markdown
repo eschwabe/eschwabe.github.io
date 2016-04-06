@@ -46,13 +46,54 @@ This series contains review materials for software engineer interview practice. 
 - Examines vertices in increasing distance from root.
 - Optimal for searching graphs and trees that are wider than they are deep.
 
-
 #### Applications:
 - **Shortest path:** Find path from s to t that uses fewest number of edges.
   
 #### Efficiency:
 - Search: O\(\|E\| + \|V\|\)
 
+
+### **Binary Search**
+
+#### Overview:
+- Search through an array to locate a specific element.
+- Algorithm typically implemented recursively.
+  - Compare element x to the midpoint of the sorted array.
+  - If x less than the midpoint, then search the left half of the array.
+  - If x greater than the midpoint, then search the right half of the array.
+  - Repeat the process treating the halves as subarrays until finding x or subarray is size 0.
+
+#### Applications:
+- Find element in sorted array.
+
+#### Efficiency:
+- Search: O\(log N\)
+
+
+### **Quick Sort**
+
+#### Overview:
+- Comparison based sorting algorithm.
+- Algorithm typically implemented recursively.
+  - Shuffle the array (to ensure average element selected).
+  - Partition array so that for some element x (typically first element of subarray).
+    - Entry a\[x\] is in place.
+    - No larger entry to the left of x.
+    - No smaller entry to the right of x.
+  - Sort each subarray.
+  - Requires special handling for duplicate keys, otherwise quadradic performance.
+- Quicksort is generally faster than mergesort.
+- In-place sorting alrorithm (constant extra space).
+- Not stable sorting algorithm (long range exchanges of elements).
+
+#### Applications:
+- Sort an array of elements.
+- Java primitive type sorting uses quick sort.
+
+#### Efficiency:
+- Best Case Sort: O(N log N)
+- Average Case Sort: O(N log N)
+- Worst Case Sort: O(N^2)
 
 
 ### Sources
