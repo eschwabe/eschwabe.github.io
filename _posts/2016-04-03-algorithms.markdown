@@ -18,13 +18,13 @@ This series contains review materials for software engineer interview practice. 
 - Analyzes paths by searching depth of the tree or graph first (nodes farthest away).
 - Algorithm implemented using a stack (LIFO).
   - Unvisited vertices added to stack.
-  - Visited verticies are marked to deal with cycles in graph (not required for a tree).
+  - Visited vertices are marked to deal with cycles in graph (not required for a tree).
   - Retrace steps when no unvisited options.
   - Typically implemented using recursion.
 - Optimal for searching graphs and tress that are deeper than they are wide.
 
 #### Applications:
-- Find all verticies connected to a given source vertex.
+- Find all vertices connected to a given source vertex.
 - Find a path between two vertices.
 
 #### Efficiency:
@@ -81,10 +81,10 @@ This series contains review materials for software engineer interview practice. 
     - No larger entry to the left of x.
     - No smaller entry to the right of x.
   - Sort each subarray.
-  - Requires special handling for duplicate keys, otherwise quadradic performance.
+  - Requires special handling for duplicate keys, otherwise quadratic performance.
 - Quicksort is generally faster than mergesort.
-- In-place sorting alrorithm (constant extra space).
-- Not stable sorting algorithm (long range exchanges of elements).
+- In-place sorting algorithm (constant extra space).
+- Not a stable sorting algorithm (long range exchanges of elements).
 
 #### Applications:
 - Sort an array of elements.
@@ -94,6 +94,30 @@ This series contains review materials for software engineer interview practice. 
 - Best Case Sort: O(N log N)
 - Average Case Sort: O(N log N)
 - Worst Case Sort: O(N^2)
+
+
+### **Merge Sort**
+
+#### Overview:
+- Comparison based sorting algorithm.
+- Algorithm typically implemented recursively.
+  - Divide array into two (recursively).
+  - Sort each subarray.
+  - Merge the two subarrays.
+- Merging algorithm.
+  - Create a temporary array that is the same size as the two halves.
+  - Keep track of three indices: output, first half, and second half.
+- Not an in-place sorting algorithm (linear extra space).
+- Stable sorting algorithm (maintains relative order of equal keys).
+
+#### Applications:
+- Sort an array of elements.
+- Java generic object type sorting uses merge sort.
+
+#### Efficiency:
+- Best Case Sort: O(N log N)
+- Average Case Sort: O(N log N)
+- Worst Case Sort: O(N log N)
 
 
 ### Sources
