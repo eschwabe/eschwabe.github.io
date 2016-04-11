@@ -163,7 +163,7 @@ This series contains review materials for software engineer interview practice. 
 - Variant of an n-ary tree in which characters are stored at each node.
 - Each path down the tree may represent a word (or at least a prefix to a word).
 - Useful for algorithms that do not require looking at entire key.
-- Performanced based on height of trie, which is equal to maximum length of key/word (m).
+- Performance based on height of trie, which is equal to maximum length of key/word (m).
 
 
 #### Types:
