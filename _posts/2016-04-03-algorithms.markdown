@@ -7,7 +7,7 @@ tags: interview algorithms
 comments: true
 ---
 
-This series contains review materials for software engineer interview practice. This guide provides a high-level overview of basic algorithms including their implementations, applications and efficiency.
+This series contains review materials for software engineer interview questions. This guide provides a high-level overview of basic algorithms including their implementations, applications and efficiency.
 
 ### **Depth-First Search**
 
@@ -119,27 +119,6 @@ This series contains review materials for software engineer interview practice. 
 - Average Case Sort: O(N log N)
 - Worst Case Sort: O(N log N)
 
-
-### **Recursion**
-
-#### Overview:
-- An algorithm that calls itself within its definition.
-  - **Recursive case** a conditional statement that triggers the recursion.
-  - **Base case** a conditional statement that breaks the recursion.
-- **Stack level too deep** and **stack overflow**.
-  - Recursion places calls on the execution stack.
-  - Typically limited by the runtime or operating system.
-  - Must be aware of potential exploits (i.e. input data cannot be too large).
-- Often seen in algorithms such as depth-first search.
-
-### **Dynamic Programming**
-
-#### Overview:
-- An algorithm that **memoizes** or **caches** intermediate results or return values from methods.
-- Problem must have two key attributes for dynamic programming to apply.
-  - Optimal substructure.
-  - Overlapping sub-problems.
-- Often seen in problems such as computing a fibonacci number.
 
 ### Sources
 

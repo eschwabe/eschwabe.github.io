@@ -238,6 +238,16 @@
             font-size: 18px;
         }
     }
+    
+    table {
+        padding-bottom: $spacing-unit;
+
+    }
+    
+    table td {
+        border: 1px solid black;
+    }
+
 }
 
 /**

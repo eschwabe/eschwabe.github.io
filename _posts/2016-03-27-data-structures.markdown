@@ -7,7 +7,7 @@ tags: interview data-structures
 comments: true
 ---
 
-This series contains review materials for software engineer interview practice. This guide provides a high-level overview on basic data structures including their implementations, related algorithms, and efficiency.
+This series contains review materials for software engineer interview questions. This guide provides a high-level overview on basic data structures including their implementations, related algorithms, and efficiency.
 
 
 ### **Arrays/Strings**
