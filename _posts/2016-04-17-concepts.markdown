@@ -43,6 +43,8 @@ This series contains review materials for software engineer interview questions.
 |And|&|True when both input bits true|
 |Or|\||True when either input bits are true|
 |Exclusive Or|^|True when input bits differ|
+|Left Shift|<<|Shift bits left by specified amount and pad with zeroes|
+|Right Shift|>>|Shift bits right by specified amount and pad with zeroes|
 
 #### Facts and Tricks:
 
