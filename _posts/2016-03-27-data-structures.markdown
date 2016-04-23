@@ -75,12 +75,12 @@ This series contains review materials for software engineer interview questions.
 - Designed to optimize searching, insertion, and deletion.
 - **Hash functions** accept a key and return an output value unique to that specific key. 
   - Method for computing array index from key.
-- **Hash collisions** are when a hash function returns the same output for two distinct outputs.
+- **Hash collisions** are when a hash function returns the same output for two distinct inputs.
   - All hash functions have this problem.
   - This is often accommodated by creating large hash tables (arrays).
 
 #### Types:
-- There are a few different techniques for dealing with collision resolution
+- There are a few different techniques for dealing with collision resolution.
 - **Separate chaining**
   - Use array of linked lists. When searching for key, check each entry of list associated with hash value.
   - Array size M must consider number of key-value pairs N. Typical choice M ~ N/5. 
@@ -98,9 +98,9 @@ This series contains review materials for software engineer interview questions.
 
 #### Overview:
 - Stores data with **nodes** that point to other nodes.
-  - Nodes, at its most basic it has one datum and one reference (another node).
+  - Nodes, at their most basic have one datum and one reference (another node).
   - A linked list _chains_ nodes together by pointing one node's reference towards another node.
-- List requires maintaining a reference to the head and/or tail node
+- List requires maintaining a reference to the head and/or tail node.
 - Designed to optimize insertion and deletion, slow at indexing and searching.
 
 #### Types:
@@ -110,8 +110,9 @@ This series contains review materials for software engineer interview questions.
 
 #### Algorithms:
 - **Runner**
-  - Use two pointers to iterate through list
-  - Increment at different rates to search for middle (p1 at 1x, p2 at 2x, p1 ends up in middle)
+  - Use two pointers to iterate through list.
+  - Increment at different rates to search for middle of list.
+  - P1 at 1x, P2 at 2x, P1 ends up in middle.
 
 #### Efficiency:
 - Access:     O(n)
@@ -129,26 +130,25 @@ This series contains review materials for software engineer interview questions.
 
 #### Types:
 - **Balanced tree** is a tree with minimum possible maximum height for all the leaf nodes.
-  - Red-Black and AVL Trees are common implementations of balanced trees 
+  - Red-Black and AVL Trees are common implementations of balanced trees.
 - **Degenerate tree** is an unbalanced tree, which if entirely one-sided is a essentially a linked list.
 - **Complete tree** is a tree with all levels filled except possibly the last and all nodes are as far left as possible.
 - **Binary search tree** is a tree that uses comparable keys to assign which direction a child is.
-  - Left child has a key smaller than it's parent node.
-  - Right child has a key greater than it's parent node.
-  - There can be no duplicate node.
+  - Left children have keys smaller than the parent node.
+  - Right children have keys greater than the parent node.
+  - There can be no duplicate nodes.
   - Because of the above it is more likely to be used as a data structure than a binary tree.
 
 #### Algorithms:
 - **Depth-First Search**
   - The search tree is deepened as much as possible on each child before going to the next sibling.
-  - Typically implemented recursively using the stack
+  - Typically implemented recursively using the stack.
 - **Depth-First Search Traversal Order**
   - Pre-Order: Root, Left, Right
   - In-Order: Left, Root, Right
   - Post-Order: Left, Right, Root
 - **Breadth-First Search**
-  - The search tree is broadened as much as possible on each depth before going to the next depth.
-  - a.k.a level-order
+  - The search tree is broadened as much as possible on each depth before going to the next depth. (a.k.a level-order)
 
 #### Efficiency:
 - Access:     O(log n)
