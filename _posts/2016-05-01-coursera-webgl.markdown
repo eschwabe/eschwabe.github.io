@@ -29,7 +29,7 @@ The class had us implement several intermediate steps before the final assignmen
 
 ## The Content
 
-The course itself covered the major topics required for 3D rendering and using WebGL. The class focuses on WebGL due to the fact that it is the primary platform independent implementation of a 3D graphics API. The high-level course outline is listed below. You can find out more on the Coursera course **[page](https://www.coursera.org/course/webgl)**.
+The course itself covered the major topics required for 3D rendering and using WebGL. The class focuses on WebGL due to the fact that it is the primary platform independent implementation of a 3D graphics API. The high-level course outline is listed below. You can find out more on **[Coursera](https://www.coursera.org/)** (course no longer offered).
 
 - Week 1: Introduction and Background
 - Week 2: WebGL
