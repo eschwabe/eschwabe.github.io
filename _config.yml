@@ -3,7 +3,7 @@ title: Eric Schwabe's Blog
 email: eric@ericschwabe.com
 description: My thoughts, perspectives, and ideas on software and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ericschwabe.com" # the base hostname & protocol for your site
+url: "https://www.ericschwabe.com" # the base hostname & protocol for your site
 twitter_username: ericschwabe
 github_username:  eschwabe
 paginate: 5

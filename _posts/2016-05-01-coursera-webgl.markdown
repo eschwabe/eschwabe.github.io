@@ -13,13 +13,13 @@ Coursera classes can be a great tool for learning new technologies or improving 
 
 Let's start with the final product. Demos are always fun to show. :) The page renders a simple 3D scene with a grid and a set of objects (starting with a single sphere). The scene may be observed using the camera which starts out as automatically rotating around the grid. Additional objects may be added to the scene and their position, rotation, and scale controlled. Lastly, the environment has two simple spotlights whose position can be manipulated. Try it out! 
 
-#### **[WebGL Example](http://ericschwabe.com/graphics-webgl/assignment5/)**
+#### **[WebGL Example](/graphics-webgl/assignment5/)**
 
 ![Example]({{ site.baseurl }}/images/2016-05-01-webgl-example.png)
 
 The class had us implement several intermediate steps before the final assignment. The other assignments provided opportunities to learn more about the computations involved with 3D graphics and the WebGL API. You can also try out those here.
 
-**[WebGL Assignments](http://ericschwabe.com/graphics-webgl/)**
+**[WebGL Assignments](/graphics-webgl/)**
 
 - Assignment 1: Tessellation and Twist
 - Assignment 2: Painting with the Mouse
