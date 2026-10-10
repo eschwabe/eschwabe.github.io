@@ -11,6 +11,6 @@ show_downloads: false
 
 # Build settings
 markdown: kramdown
-plugins: ['jekyll-paginate']
+plugins: ['jekyll-paginate', 'jekyll-seo-tag']
 theme: jekyll-theme-slate
 
