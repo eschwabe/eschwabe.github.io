@@ -25,9 +25,9 @@ social:
 # repo_id and category_id are filled in.
 giscus:
   repo: eschwabe/eschwabe.github.io
-  repo_id: ""
+  repo_id: "MDEwOlJlcG9zaXRvcnkzNzg5OTE2Nw=="
   category: Comments
-  category_id: ""
+  category_id: "DIC_kwDOAkJLn84DKHCI"
 
 # Build settings
 markdown: kramdown
