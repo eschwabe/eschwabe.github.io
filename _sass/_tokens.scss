@@ -1,0 +1,61 @@
+// Design tokens. Colors are redefined for dark mode, either from the OS
+// preference or an explicit choice saved by the theme toggle.
+
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --text: #1d1f22;
+  --text-muted: #5c6168;
+  --border: #e4e2dd;
+  --accent: #2f5d50;
+  --accent-hover: #1f4238;
+  --accent-soft: #e6efeb;
+  --code-bg: #f3f1ed;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --step--1: clamp(0.85rem, 0.82rem + 0.15vw, 0.92rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.12rem + 0.4vw, 1.4rem);
+  --step-2: clamp(1.45rem, 1.3rem + 0.75vw, 1.85rem);
+  --step-3: clamp(1.9rem, 1.6rem + 1.5vw, 2.75rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  --radius: 10px;
+  --measure: 68ch;
+  --container: 46rem;
+}
+
+@mixin dark-tokens {
+  --bg: #141517;
+  --surface: #1c1e21;
+  --text: #e8e6e3;
+  --text-muted: #a2a7ad;
+  --border: #2e3135;
+  --accent: #8cc7b3;
+  --accent-hover: #b0dccd;
+  --accent-soft: #1f2e29;
+  --code-bg: #1f2124;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-tokens;
+  }
+}
+
+:root[data-theme="dark"] {
+  @include dark-tokens;
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}

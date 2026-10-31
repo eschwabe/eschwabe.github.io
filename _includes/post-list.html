@@ -1,0 +1,9 @@
+<ul class="post-list">
+  {% for post in include.posts %}
+  <li class="post-list__item">
+    <time class="post-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+    <h3 class="post-list__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    {% if include.excerpts %}<p class="post-list__excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

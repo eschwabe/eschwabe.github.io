@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<section class="hero">
+  {% if site.author.avatar %}
+  <img class="hero__avatar" src="{{ site.author.avatar | relative_url }}" alt="" width="96" height="96">
+  {% endif %}
+  <h1 class="hero__title">Hi, I'm {{ site.author.name | split: " " | first }}.</h1>
+  <div class="hero__bio">
+    {{ content }}
+  </div>
+  {% include social-links.html %}
+</section>
+
+{% if site.data.projects.size > 0 %}
+<section class="home-section" aria-labelledby="projects-heading">
+  <h2 id="projects-heading" class="section-heading">Projects</h2>
+  <ul class="project-grid">
+    {% for project in site.data.projects %}
+    <li class="project-card">
+      <h3 class="project-card__title"><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+      <p class="project-card__description">{{ project.description }}</p>
+      {% if project.tags %}
+      <ul class="tag-list">
+        {% for tag in project.tags %}<li class="tag">{{ tag }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="home-section" aria-labelledby="writing-heading">
+  <div class="section-heading-row">
+    <h2 id="writing-heading" class="section-heading">Recent writing</h2>
+    <a class="section-link" href="{{ '/blog/' | relative_url }}">All posts &rarr;</a>
+  </div>
+  {% assign recent = site.posts | slice: 0, 3 %}
+  {% include post-list.html posts=recent excerpts=true %}
+</section>

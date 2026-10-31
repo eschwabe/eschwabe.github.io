@@ -1,12 +1,9 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
-body {
-  font-size: 18px;
-}
-
-.inner {
-    max-width: 800px;
-  }
+@import "tokens";
+@import "base";
+@import "layout";
+@import "components";
+@import "post";
+@import "syntax";

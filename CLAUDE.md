@@ -18,12 +18,15 @@ bundle exec jekyll build       # build into _site/ (gitignored)
 
 ## Architecture
 
-- **Theme**: `jekyll-theme-slate` (gem-based). Local files override the theme: `_layouts/default.html` replaces the theme's default layout (adds `{% seo %}` from jekyll-seo-tag), and `assets/css/style.scss` imports `{{ site.theme }}` then applies site-specific CSS overrides.
-- **Layouts**: `default` (page shell) ← `post` / `page`. Posts use `layout: post`.
-- **Home page**: `index.html` lists posts via `paginator` (jekyll-paginate, `paginate: 5` in `_config.yml`). jekyll-paginate only works on `index.html`.
-- **Feed**: `feed.xml` is a hand-written Liquid RSS template (not the jekyll-feed plugin).
-- **Posts**: `_posts/YYYY-MM-DD-slug.markdown` with front matter `layout`, `title`, `date` (with `-0800` offset), `categories`, `tags`, `comments`. Images live in `images/` named with the post's date prefix.
+- **Theme**: hand-written, no gem theme. `_layouts/default.html` is the page shell (`{% seo %}`, header/footer includes, an inline pre-paint script that applies the saved light/dark choice). `assets/css/style.scss` imports partials from `_sass/` (`_tokens` holds all colors/type/spacing as CSS custom properties, redefined for dark mode). Sass is the old Ruby Sass converter from Jekyll 3.10: use `@import`, no `@use`, no native CSS nesting, and avoid bare `min()`/`max()` (Sass functions).
+- **Layouts**: `default` ← `home` / `post` / `page`. Posts get `layout: post` and `comments: true` from `defaults` in `_config.yml`.
+- **Home page**: `index.html` (`layout: home`) — its body is the hero bio; projects come from `_data/projects.yml`; shows the 3 most recent posts.
+- **Blog index**: `blog/index.html` lists all posts grouped by year. No pagination.
+- **Includes**: `header`, `footer`, `social-links` (inline SVG icons), `post-list`, `theme-toggle`, `giscus`.
+- **Comments**: giscus (GitHub Discussions). Renders only when `giscus.repo_id` and `giscus.category_id` are set in `_config.yml`.
+- **Feed**: `feed.xml` is a hand-written Liquid RSS template (not the jekyll-feed plugin). `jekyll-sitemap` generates `sitemap.xml` and `robots.txt`.
+- **Posts**: `_posts/YYYY-MM-DD-slug.markdown` with front matter `title`, `date` (with `-0800` offset), `categories`, `tags`. Images live in `images/` named with the post's date prefix.
 
 ## Dependencies
 
-The `github-pages` umbrella gem was intentionally removed (it pinned a vulnerable rubyzip via jekyll-remote-theme). The Gemfile lists only what the site uses: Jekyll 3.10, slate theme, jekyll-paginate, kramdown-parser-gfm, plus `base64`/`bigdecimal`/`webrick` for Ruby 3.4+. Don't re-add `github-pages`. Most commits are Dependabot bumps to `Gemfile.lock`.
+The `github-pages` umbrella gem was intentionally removed (it pinned a vulnerable rubyzip via jekyll-remote-theme). The Gemfile lists only what the site uses: Jekyll 3.10, jekyll-seo-tag, jekyll-sitemap, kramdown-parser-gfm, plus `base64`/`bigdecimal`/`webrick` for Ruby 3.4+. Don't re-add `github-pages`. Most commits are Dependabot bumps to `Gemfile.lock`.

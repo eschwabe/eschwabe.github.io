@@ -1,0 +1,4 @@
+- title: WebGL Experiments
+  description: Interactive 3D scenes built for Coursera's WebGL course — tessellation, painting, a geometric CAD tool, lighting, and texture mapping.
+  url: /graphics-webgl/
+  tags: [WebGL, JavaScript, Graphics]

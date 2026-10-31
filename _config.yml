@@ -1,16 +1,46 @@
 # Site settings
-title: Eric Schwabe's Blog
-email: eric@ericschwabe.com
+title: Eric Schwabe
+tagline: Software, technology, and the occasional side project.
 description: My thoughts, perspectives, and ideas on software and technology.
+email: eric@ericschwabe.com
+lang: en-US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ericschwabe.com" # the base hostname & protocol for your site
 twitter_username: ericschwabe
 github_username:  eschwabe
-paginate: 5
-show_downloads: false
+
+# Used by jekyll-seo-tag and the home page hero
+author:
+  name: Eric Schwabe
+  url: "https://www.ericschwabe.com"
+twitter:
+  username: ericschwabe
+social:
+  name: Eric Schwabe
+  links:
+    - https://github.com/eschwabe
+    - https://twitter.com/ericschwabe
+
+# Comments via giscus (https://giscus.app). Comments render only once
+# repo_id and category_id are filled in.
+giscus:
+  repo: eschwabe/eschwabe.github.io
+  repo_id: "MDEwOlJlcG9zaXRvcnkzNzg5OTE2Nw=="
+  category: Comments
+  category_id: "DIC_kwDOAkJLn84DKHCI"
 
 # Build settings
 markdown: kramdown
-plugins: ['jekyll-paginate', 'jekyll-seo-tag']
-theme: jekyll-theme-slate
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+plugins: ['jekyll-seo-tag', 'jekyll-sitemap']
+exclude: ['README.md', 'CLAUDE.md', 'Gemfile', 'Gemfile.lock', '.worktrees', '.ai', '.sass-cache']
 
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
