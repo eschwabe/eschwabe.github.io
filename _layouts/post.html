@@ -1,39 +1,45 @@
 ---
 layout: default
-comments: true
 ---
-<div class="post">
+<article class="post">
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    {% assign words = content | number_of_words %}
+    {% assign minutes = words | divided_by: 200 | at_least: 1 %}
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span aria-hidden="true">&middot;</span>
+      {{ minutes }} min read
+    </p>
+    {% if page.tags.size > 0 %}
+    <ul class="tag-list">
+      {% for tag in page.tags %}<li class="tag">{{ tag }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </header>
 
-  <article class="post-content">
+  <div class="prose">
     {{ content }}
-  </article>
+  </div>
 
-  {% if page.comments %}
-    <div id="disqus_thread"></div>
-    <script>
-    /**
-    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    */
-    var disqus_config = function () {
-      this.page.url = window.location.origin+"{{ page.url }}"; // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-
-    s.src = '//eschwabeblog.disqus.com/embed.js';
-
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  {% if page.previous or page.next %}
+  <nav class="post-nav" aria-label="More posts">
+    {% if page.previous %}
+    <a class="post-nav__link post-nav__link--prev" href="{{ page.previous.url | relative_url }}">
+      <span class="post-nav__label">&larr; Older</span>
+      <span class="post-nav__title">{{ page.previous.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a class="post-nav__link post-nav__link--next" href="{{ page.next.url | relative_url }}">
+      <span class="post-nav__label">Newer &rarr;</span>
+      <span class="post-nav__title">{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
   {% endif %}
 
-</div>
+  {% if page.comments %}{% include giscus.html %}{% endif %}
+
+</article>

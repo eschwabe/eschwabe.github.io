@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-nav" aria-label="Main">
+      {% assign blog_url = '/blog/' | relative_url %}
+      {% assign about_url = '/about/' | relative_url %}
+      <a href="{{ blog_url }}"{% if page.url == '/blog/' or page.layout == 'post' %} aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ about_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      {% include theme-toggle.html %}
+    </nav>
+  </div>
+</header>

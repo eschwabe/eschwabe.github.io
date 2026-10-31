@@ -1,0 +1,42 @@
+// Rouge syntax highlighting. Colors come from custom properties so the
+// same rules work in light and dark mode.
+
+:root {
+  --syn-comment: #6a737d;
+  --syn-keyword: #a12d5d;
+  --syn-string: #2f6f3e;
+  --syn-number: #a0522d;
+  --syn-name: #3b5bab;
+  --syn-type: #7a4bb3;
+}
+
+@mixin dark-syntax {
+  --syn-comment: #8b949e;
+  --syn-keyword: #f08db4;
+  --syn-string: #9fd6a6;
+  --syn-number: #f2b482;
+  --syn-name: #93b4f5;
+  --syn-type: #c9a8f0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    @include dark-syntax;
+  }
+}
+
+:root[data-theme="dark"] {
+  @include dark-syntax;
+}
+
+.highlight {
+  .c, .c1, .cm, .cs, .cp, .ch, .cpf { color: var(--syn-comment); font-style: italic; }
+  .k, .kd, .kn, .kp, .kr, .kv, .ow, .o { color: var(--syn-keyword); }
+  .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr, .ss { color: var(--syn-string); }
+  .m, .mi, .mf, .mh, .mo, .il, .kc { color: var(--syn-number); }
+  .nf, .fm, .na, .nb, .bp, .nx { color: var(--syn-name); }
+  .kt, .nc, .nn, .no, .ne, .nt { color: var(--syn-type); }
+  .gd { color: #b31d28; }
+  .gi { color: #22863a; }
+  .err { color: inherit; }
+}
