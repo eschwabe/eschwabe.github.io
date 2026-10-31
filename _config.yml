@@ -2,12 +2,12 @@
 title: Eric Schwabe
 tagline: Software, technology, and the occasional side project.
 description: My thoughts, perspectives, and ideas on software and technology.
-email: eric@ericschwabe.com
 lang: en-US
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.ericschwabe.com" # the base hostname & protocol for your site
 twitter_username: ericschwabe
 github_username:  eschwabe
+linkedin_username: eschwabe
 
 # Used by jekyll-seo-tag and the home page hero
 author:
@@ -20,6 +20,7 @@ social:
   links:
     - https://github.com/eschwabe
     - https://twitter.com/ericschwabe
+    - https://www.linkedin.com/in/eschwabe/
 
 # Comments via giscus (https://giscus.app). Comments render only once
 # repo_id and category_id are filled in.
